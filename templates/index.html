@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VenueFinder - Your AI Venue Assistant</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-map-marker-alt"></i>
+                VenueFinder
+            </div>
+            <div class="nav-links">
+                <a href="#" id="historyBtn"><i class="fas fa-history"></i> History</a>
+                <a href="#" id="savedBtn"><i class="fas fa-bookmark"></i> Saved</a>
+                <a href="#" id="themeBtn"><i class="fas fa-moon"></i> Theme</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero fade-in">
+            <h1>Venue Assistant</h1>
+            <p>Ask me about venues or places you'd like to discover</p>
+        </section>
+
+        <div class="chat-container fade-in">
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will be inserted here -->
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Ask about venues or places..." autocomplete="off">
+                <button id="sendBtn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="history-panel" id="historyPanel">
+            <div class="history-header">
+                <h3>Chat History</h3>
+                <button class="close-btn" id="closeHistoryBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="history-content" id="historyContent">
+                <!-- History items will be inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Powered by DeepSeek AI & Foursquare Location Data</p>
+    </footer>
+
+    <template id="venueCardTemplate">
+        <div class="venue-card fade-in">
+            <img class="venue-image" src="" alt="Venue Image">
+            <div class="venue-info">
+                <h3 class="venue-name"></h3>
+                <p class="venue-type"></p>
+                <div class="venue-details">
+                    <span class="rating"></span>
+                    <span class="price"></span>
+                    <span class="capacity"></span>
+                </div>
+                <p class="address"></p>
+                <div class="venue-actions">
+                    <a href="#" class="directions-link" target="_blank">
+                        <i class="fas fa-directions"></i> Get Directions
+                    </a>
+                    <button class="save-venue">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="/static/app.js"></script>
+</body>
+</html> 
